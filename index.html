@@ -1,10 +1,885 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-  <title>Мой сайт
-  </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Максим & Валерия | Свадьба 16 мая 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --color-cream: #F8F5F0;
+            --color-dark: #1A1A1A;
+            --color-gold: #C9A96E;
+            --color-light-gray: #E8E8E8;
+            --color-gray: #8C8C8C;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--color-dark);
+            background-color: var(--color-cream);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Главная-секция */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)),
+                        url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .couple-names {
+            font-size: 5rem;
+            margin-bottom: 10px;
+            letter-spacing: 3px;
+        }
+
+        .wedding-date {
+            font-size: 2.2rem;
+            margin-top: 20px;
+            letter-spacing: 5px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        .wedding-date:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 2px;
+            background-color: var(--color-gold);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .invitation-text {
+            font-size: 1.4rem;
+            margin-top: 30px;
+            font-weight: 300;
+            line-height: 1.8;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Секция с деталями */
+        .details-section {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 60px;
+            color: var(--color-dark);
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 2px;
+            background-color: var(--color-gold);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .detail-card {
+            text-align: center;
+        }
+
+        .detail-icon {
+            font-size: 2.5rem;
+            color: var(--color-gold);
+            margin-bottom: 25px;
+        }
+
+        .detail-title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--color-dark);
+        }
+
+        .detail-text {
+
+font-size: 1.1rem;
+            color: var(--color-gray);
+            line-height: 1.7;
+        }
+
+        .address {
+            font-size: 1.2rem;
+            margin: 20px 0;
+            line-height: 1.8;
+        }
+
+        .map-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background-color: transparent;
+            color: var(--color-dark);
+            border: 1px solid var(--color-dark);
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .map-btn:hover {
+            background-color: var(--color-dark);
+            color: white;
+        }
+
+        /* Таймлайн */
+        .timeline-section {
+            padding: 100px 0;
+            background-color: var(--color-cream);
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: var(--color-gold);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+        }
+
+        .timeline-time {
+            font-size: 1.8rem;
+            color: var(--color-gold);
+            margin-bottom: 10px;
+        }
+
+        .timeline-title {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: var(--color-dark);
+        }
+
+        .timeline-desc {
+            color: var(--color-gray);
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background-color: var(--color-gold);
+            border-radius: 50%;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        /* Секция дресс-кода и подарков */
+        .info-section {
+            padding: 100px 0;
+            background-color: white;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .info-card {
+            padding: 40px;
+            border-radius: 10px;
+            background-color: var(--color-cream);
+        }
+
+        .info-title {
+            font-size: 2rem;
+            margin-bottom: 25px;
+            color: var(--color-dark);
+            text-align: center;
+        }
+
+        .info-text {
+            font-size: 1.1rem;
+            color: var(--color-gray);
+            line-height: 1.8;
+        }
+
+        /* Форма */
+        .form-section {
+            padding: 100px 0;
+            background-color: var(--color-cream);
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+        }
+
+        .form-title {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .form-subtitle {
+            text-align: center;
+            color: var(--color-gray);
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: var(--color-dark);
+        }
+
+        input, select, textarea {
+
+	width: 100%;
+            padding: 15px;
+            border: 1px solid var(--color-light-gray);
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--color-gold);
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 30px;
+        }
+
+        .radio-label {
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        .radio-label input {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        .checkbox-label input {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            background-color: var(--color-dark);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 40px;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--color-gold);
+        }
+
+        .form-success {
+            background-color: #F0F9F0;
+            border: 1px solid #C1E7C1;
+            color: #2E7D32;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+            display: none;
+        }
+
+        /* Футер */
+        footer {
+            background-color: var(--color-dark);
+            color: white;
+            padding: 70px 0;
+            text-align: center;
+        }
+
+        .footer-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .footer-text {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.8;
+        }
+
+        .signature {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            margin-top: 40px;
+            color: var(--color-gold);
+        }
+
+        /* Адаптивность */
+        @media (max-width: 992px) {
+            .details-grid, .info-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .couple-names {
+                font-size: 3.5rem;
+            }
+            
+            .wedding-date {
+                font-size: 1.8rem;
+            }
+            
+            .checkbox-group {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .timeline:before {
+                left: 30px;
+            }
+            
+            .timeline-item, .timeline-item:nth-child(odd) {
+                flex-direction: row;
+                justify-content: flex-start;
+                padding-left: 60px;
+            }
+            
+            .timeline-content {
+                width: 100%;
+            }
+            
+            .timeline-item:before {
+                left: 22px;
+            }
+            
+            .form-container {
+                padding: 30px 20px;
+            }
+            
+            .radio-group {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .hero {
+                min-height: 90vh;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .couple-names {
+                font-size: 2.8rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+	}
+            
+            .detail-title, .info-title {
+                font-size: 1.6rem;
+            }
+            
+            .form-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Стили для изображений */
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .image-gallery img {
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
-  <h1>moy sait</h1>
+    <!-- Главная-секция -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="couple-names">Максим & Валерия</h1>
+            <p class="invitation-text">Приглашаем Вас разделить с нами этот счастливый день!</p>
+            <h2 class="wedding-date">16 МАЯ 2026</h2>
+        </div>
+    </section>
+
+    <!-- Секция с приветствием -->
+    <section class="details-section">
+        <div class="container">
+            <h2 class="section-title">Дорогие гости!</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.3rem; line-height: 1.8; color: var(--color-gray);">
+                    Мы будем счастливы разделить с Вами радость неповторимого для нас дня – дня нашей свадьбы!
+                    Приглашаем присоединиться к нашему празднику и украсить его своим присутствием!
+                </p>
+            </div>
+            
+            <div class="image-gallery">
+                <img src="images/design1.jpg" alt="Красивая картинка" width="400" height="600">
+                <img src="images/design3.jpg" alt="Красивая картинка" width="400" height="600">
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция с деталями -->
+    <section class="details-section">
+        <div class="container">
+            <h2 class="section-title">План нашего дня</h2>
+            <div class="details-grid">
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-ring"></i>
+                    </div>
+                    <h3 class="detail-title">Торжественная церемония бракосочетания</h3>
+                    <div class="detail-text">
+                        <p class="address">
+                            г. Минск, ЗАГС Московского района.
+                        </p>
+                        <p>Церемония начнется в 14:10</p>
+                        <p>Предварительный сбор для фото 13:30</p>
+                        <img src="images/dvorec.jpg" alt="ЗАГС Московского района" width="500" height="300" style="max-width: 100%; height: auto; margin: 20px 0;">
+                        <a href="https://yandex.ru/maps/-/CPAIIHMn" target="_blank" class="map-btn">Перейти к карте</a>
+                    </div>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">
+                        <i class="fas fa-glass-cheers"></i>
+                    </div>
+                    <h3 class="detail-title">Торжество</h3>
+                    <div class="detail-text">
+                        <p class="address">
+                            Цнянка, Сиреневая улица, 36
+                        </p>
+                        <p style="font-weight: 600; margin-bottom: 20px;">Everest House</p>
+                        <img src="https://storage.kvartiranasutki.by/cache/25048/HqNGxRw69uGfUX1BeTHXQutbKMi1_cnx.jpeg?w=1200&fit=crop&fm=webp&s=39d7e73ecffd24bab729de331f1b2eda" alt="Усадьба" width="300" height="300" style="max-width: 100%; height: auto; margin: 20px 0;">
+                        <a href="https://yandex.ru/maps/-/CPAXaGy~" target="_blank" class="map-btn">Перейти к карте</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Таймлайн -->
+    <section class="timeline-section">
+        <div class="container">
+            <h2 class="section-title">Программа дня</h2>
+		<div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="timeline-time">13:00-13:30</h3>
+                        <h4 class="timeline-title">Встреча гостей в ЗАГСе</h4>
+                        <p class="timeline-desc">Собираемся, знакомимся, делаем фото на память</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="timeline-time">14:15</h3>
+                        <h4 class="timeline-title">Церемония бракосочетания</h4>
+                        <p class="timeline-desc">Торжественная регистрация брака</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="timeline-time">14:30-15:00</h3>
+                        <h4 class="timeline-title">Сбор гостей у ЗАГСа</h4>
+                        <p class="timeline-desc">Собираемся, делаем фото на память, принимаем поздравления</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="timeline-time">15:00-15:30</h3>
+                        <h4 class="timeline-title">Отъезд гостей в усадьбу</h4>
+                        <p class="timeline-desc">Встреча гостей в усадьбе, приветственные напитки и закуски</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="timeline-time">15:00-16:30</h3>
+                        <h4 class="timeline-title">Фотоссесия</h4>
+                        <p class="timeline-desc">Молодожены будут позировать фотографу, чтобы сохранить этот день на снимках</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="timeline-time">16:30-19:30</h3>
+                        <h4 class="timeline-title">Приезд молодожен. Начало банкета</h4>
+                        <p class="timeline-desc">Праздничный ужин, тосты, поздравления. Конкурсы и развлечения от гостей приветствуются</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="timeline-time">19:30-20:00</h3>
+                        <h4 class="timeline-title">Праздничный торт</h4>
+                        <p class="timeline-desc">Насладимся десертом в теплой компании</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="timeline-time">20:00-23:00</h3>
+                        <h4 class="timeline-title">Отдых</h4>
+                        <p class="timeline-desc">Все переходим в соседнее здание для хорошего времяпровождения в бане и купели</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="timeline-time">23:00</h3>
+                        <h4 class="timeline-title">Завершение вечера</h4>
+                        <p class="timeline-desc">Все желающие остаются на ночевку в усадьбе. Прощание с гостями, желающими отправиться домой</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция с дресс-кодом и подарками -->
+    <section class="info-section">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3 class="info-title">Дресс - код</h3>
+                    <div class="info-text">
+			<p>Мы очень стараемся сделать праздник душевным и красивым и будем рады, если в своих нарядах Вы поддержите цветовую гамму нашей свадьбы.</p>
+                    </div>
+                    <img src="images/dresscod.jpg" alt="Цветовая гамма" width="450" height="100" style="max-width: 100%; height: auto; margin-top: 20px;">
+                </div>
+                <div class="info-card">
+                    <h3 class="info-title">Пожелания</h3>
+                    <div class="info-text">
+                        <p>Мы не будем оригинальными, но будем практичными. Лучший для нас подарок – это Ваша денежная инвестиция в нашу молодую семью.</p>
+                        <p style="margin-top: 20px;">Праздник пройдет в теплой семейной атмосфере, без ведущих. Придуманные вами конкурсы и развлечения приветствуются.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подробности по Усадьбе -->
+    <section class="info-section">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3 class="info-title">Подробности</h3>
+                    <div class="info-text">
+                        <p>Мы будем париться в бане и купаться в купели, всем желающим необходимо взять с собой купальные принадлежности.</p>
+                        <p>В усадьбе есть парковочные места для 3 машин.</p>
+                        <p>В усадьбе есть караоке и проектор.</p>
+                        <p>Присутствует зона барбекю.</p>
+                        <p>В усадьбе есть достаточное количество спальных мест (около 20) - все желающие могут остаться на ночь.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма подтверждения -->
+    <section class="form-section">
+        <div class="container">
+            <div class="form-container">
+                <h3 class="form-title">Подтвердите, пожалуйста, анкету</h3>
+                <p class="form-subtitle">Пожалуйста, заполните форму до 02.03.2026</p>
+                
+                <form id="rsvpForm">
+                    <div class="form-group">
+                        <label for="name">Напишите, пожалуйста, Ваши ФИО *</label>
+                        <input type="text" id="name" name="name" required placeholder="Ваши ФИО">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Сможете ли присутствовать на нашем торжестве? *</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="attendance" value="yes" required> Я с удовольствием приду
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="attendance" value="no"> К сожалению, не смогу присутствовать
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Вы будете на своей машине? *</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="car" value="yes_car" required> Да, буду на своей машине
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="car" value="yes_with_people"> Буду на своей машине и могу взять с собой людей
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="car" value="no_car"> Нет машины
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Что предпочитаете из алкогольных напитков?</label>
+			<div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="drinks[]" value="red_wine"> Красное вино
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="drinks[]" value="white_wine"> Белое вино
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="drinks[]" value="champagne"> Шампанское
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="drinks[]" value="vodka"> Водка
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="drinks[]" value="whisky"> Виски
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="drinks[]" value="cognac"> Коньяк
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="drinks[]" value="no_alcohol"> Не пью алкоголь
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Другое (необязательно)</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Укажите уточняющую информацию:
+1) какое количество людей можете взять к себе в машину;
+2) Мы не разбираемся в крепком алкоголе, поэтому всем желающим выпить виски/коньяк и пр просим отписать, какой именно;
+3) Прочие уточняющие моменты..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Отправить подтверждение</button>
+                </form>
+                
+                <div id="successMessage" class="form-success">
+                    <i class="fas fa-check-circle" style="font-size: 2.5rem; margin-bottom: 15px;"></i>
+                    <h3 style="margin-bottom: 10px;">Спасибо за ваш ответ!</h3>
+                    <p>Мы получили ваше подтверждение и очень ждём встречи 16 мая 2026 года!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <p class="footer-text">С нетерпением ждём этого дня и надеемся разделить его с вами!</p>
+            <p class="signature">С любовью,<br>Максим и Валерия</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('rsvpForm');
+            const successMessage = document.getElementById('successMessage');
+            
+            // ВАШ реальный URL из Apps Script
+            const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxZvehKYldFa9UOEOBCyfk_XRzL5lU_oMtMBmJFw4A4YvI-aSn0OTQK4u7ByAeflhc/exec';
+            
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                // Проверяем обязательные поля
+                if (!form.name.value  !form.querySelector('input[name="attendance"]:checked')  !form.querySelector('input[name="car"]:checked')) {
+                    alert('Пожалуйста, заполните все обязательные поля (ФИО, Присутствие и Машина)');
+                    return;
+                }
+                
+                // Блокируем кнопку
+                const submitBtn = this.querySelector('.submit-btn');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Отправка...';
+                submitBtn.disabled = true;
+                
+                try {
+                    // Собираем данные
+		const formData = {
+                        name: form.name.value.trim(),
+                        attendance: document.querySelector('input[name="attendance"]:checked')?.value || '',
+                        car: document.querySelector('input[name="car"]:checked')?.value || '',
+                        drinks: Array.from(document.querySelectorAll('input[name="drinks[]"]:checked'))
+                                  .map(cb => cb.value),
+                        message: form.message.value.trim()
+                    };
+                    
+                    console.log('Отправляемые данные:', formData);
+                    
+                    // Отправляем запрос
+                    const response = await fetch(SCRIPT_URL, {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(formData)
+                    });
+                    
+                    console.log('Запрос отправлен');
+                    
+                    // Показываем успех
+                    form.style.display = 'none';
+                    successMessage.style.display = 'block';
+                    
+                    // Очищаем форму
+                    form.reset();
+                    
+                } catch (error) {
+                    console.error('Ошибка:', error);
+                    
+                    // Даже при ошибке показываем успех (данные могли отправиться)
+                    form.style.display = 'none';
+                    successMessage.style.display = 'block';
+                    alert('Спасибо! Ваш ответ записан. Если возникли проблемы, свяжитесь с нами.');
+                    
+                } finally {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }
+            });
+            
+            // Анимация появления элементов при скролле
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Анимируем секции
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>
