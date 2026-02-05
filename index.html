@@ -183,7 +183,7 @@ font-size: 1.1rem;
         }
 
         .timeline {
-            max-width: 800px;
+            max-width: 1000px; /*размер карточки*/
             margin: 0 auto;
             position: relative;
         }
@@ -249,19 +249,26 @@ font-size: 1.1rem;
 
         /* Секция дресс-кода и подарков */
         .info-section {
+	    margin:auto;
             padding: 100px 0;
             background-color: white;
+	    text-align:center;
         }
 
         .info-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 60px;
+	    margin: 0 auto;
+            position: relative;
+	    display: flex;
+            justify-content: center;
+            position: relative;
         }
 
         .info-card {
             padding: 40px;
-            border-radius: 10px;
+            border-radius: 60px;
             background-color: var(--color-cream);
         }
 
@@ -276,6 +283,7 @@ font-size: 1.1rem;
             font-size: 1.1rem;
             color: var(--color-gray);
             line-height: 1.8;
+	    text-align: center;
         }
 
         /* Форма */
@@ -536,8 +544,8 @@ font-size: 1.1rem;
             </div>
             
             <div class="image-gallery">
-				 <img src="https://avatars.dzeninfra.ru/get-zen_doc/1634555/pub_63a1c3b6621a4a155309bb74_63a1c3bf621a4a155309bed0/scale_1200" alt="Красивая картинка" width="400" height="600" style="max-width: 100%; height: auto; margin: 20px 0;">
-				 <img src="https://i.pinimg.com/474x/97/cb/af/97cbafcf10f766fe321303c27f1d1e68.jpg" alt="Красивая картинка" width="400" height="600" style="max-width: 100%; height: auto; margin: 20px 0;">
+				 <img src="https://avatars.dzeninfra.ru/get-zen_doc/1634555/pub_63a1c3b6621a4a155309bb74_63a1c3bf621a4a155309bed0/scale_1200" alt="Красивая картинка" width="400" height="400" style="max-width: 100%; height: auto; margin: 20px 0;">
+				 <img src="https://i.pinimg.com/474x/97/cb/af/97cbafcf10f766fe321303c27f1d1e68.jpg" alt="Красивая картинка" width="400" height="400" style="max-width: 100%; height: auto; margin: 20px 0;">
 				 <!-- <img src="images/design1.jpg" alt="Красивая картинка" width="400" height="600">
                 <img src="images/design3.jpg" alt="Красивая картинка" width="400" height="600">-->
             </div>
@@ -553,14 +561,16 @@ font-size: 1.1rem;
                     <div class="detail-icon">
                         <i class="fas fa-ring"></i>
                     </div>
-                    <h3 class="detail-title">Торжественная церемония бракосочетания</h3>
+                    <h3 class="detail-title">Место</h3>
                     <div class="detail-text">
                         <p class="address">
-                            г. Минск, ЗАГС Московского района.
+                            Регистрация пройдет по адресу:
+			г. Минск, проспект Газеты правда, 29
+				ЗАГС Московского района.
                         </p>
                         <p>Церемония начнется в 14:10</p>
                         <p>Предварительный сбор для фото 13:30</p>
-                        <img src="https://fastly.4sqi.net/img/general/600x600/108311181_kEp-TjPNIZ4-uSUYVKJe3gowAuLUW_xBRuhxQ20gTR4.jpg" alt="ЗАГС Московского района" width="500" height="300" style="max-width: 100%; height: auto; margin: 20px 0;">
+                        <img src="https://fastly.4sqi.net/img/general/600x600/108311181_kEp-TjPNIZ4-uSUYVKJe3gowAuLUW_xBRuhxQ20gTR4.jpg" alt="ЗАГС Московского района" width="400" height="300" style="max-width: 100%; height: auto; margin: 20px 0;">
                         <a href="https://yandex.ru/maps/-/CPAIIHMn" target="_blank" class="map-btn">Перейти к карте</a>
                     </div>
                 </div>
@@ -568,13 +578,15 @@ font-size: 1.1rem;
                     <div class="detail-icon">
                         <i class="fas fa-glass-cheers"></i>
                     </div>
-                    <h3 class="detail-title">Торжество</h3>
+                    <h3 class="detail-title">Празднование</h3>
                     <div class="detail-text">
                         <p class="address">
-                            Цнянка, Сиреневая улица, 36
-                        </p>
-                        <p style="font-weight: 600; margin-bottom: 20px;">Everest House</p>
-                        <img src="https://storage.kvartiranasutki.by/cache/25048/HqNGxRw69uGfUX1BeTHXQutbKMi1_cnx.jpeg?w=1200&fit=crop&fm=webp&s=39d7e73ecffd24bab729de331f1b2eda" alt="Усадьба" width="300" height="300" style="max-width: 100%; height: auto; margin: 20px 0;">
+                            Торжество пройдет по адресу:</p>
+			<p>Цнянка, Сиреневая улица, 36</p>
+				<p>Everest Hous</p>
+			<br>
+                        <img src="https://storage.kvartiranasutki.by/cache/25048/HqNGxRw69uGfUX1BeTHXQutbKMi1_cnx.jpeg?w=1200&fit=crop&fm=webp&s=39d7e73ecffd24bab729de331f1b2eda" alt="Усадьба" width="300" height="200" style="max-width: 100%; height: auto; margin: 20px 0;">
+			<br>
                         <a href="https://yandex.ru/maps/-/CPAXaGy~" target="_blank" class="map-btn">Перейти к карте</a>
                     </div>
                 </div>
@@ -654,7 +666,7 @@ font-size: 1.1rem;
         </div>
     </section>
 
-    <!-- Секция с дресс-кодом и подарками -->
+    <!-- Секция с дресс-кодом, подарками и уточнением  -->
     <section class="info-section">
         <div class="container">
             <div class="info-grid">
@@ -662,37 +674,48 @@ font-size: 1.1rem;
                     <h3 class="info-title">Дресс - код</h3>
                     <div class="info-text">
 			<p>Мы очень стараемся сделать праздник душевным и красивым и будем рады, если в своих нарядах Вы поддержите цветовую гамму нашей свадьбы.</p>
+			<br>
+			<span style="display: inline-block; font-size: 30px; color: #ffffff; background: #ffffff; border-radius: 100px; padding: 12px 23px;">◯</span>
+			<span style="display: inline-block; font-size: 30px; color: #dddbd7; background: #dddbd7; border-radius: 100px; padding: 12px 23px;">◯</span>
+			<span style="display: inline-block; font-size: 30px; color: #606039; background: #606039; border-radius: 100px; padding: 12px 23px;">◯</span>
+			<span style="display: inline-block; font-size: 30px; color: #476b31; background: #476b31; border-radius: 100px; padding: 12px 23px;">◯</span>
+			<span style="display: inline-block; font-size: 30px; color: #DCD9CD; background: #DCD9CD; border-radius: 100px; padding: 12px 23px;">◯</span>
+			<span style="display: inline-block; font-size: 30px; color: #63492c; background: #63492c; border-radius: 100px; padding: 12px 23px;">◯</span>
                     </div>
-                    <img src="images/dresscod.jpg" alt="Цветовая гамма" width="450" height="100" style="max-width: 100%; height: auto; margin-top: 20px;">
                 </div>
-                <div class="info-card">
-                    <h3 class="info-title">Пожелания</h3>
+            </div>
+<br>
+	  <div class="info-grid">
+                 <div class="info-card">
+                    <h3 class="info-title">Пожелания и подробности</h3>
                     <div class="info-text">
-                        <p>Мы не будем оригинальными, но будем практичными. Лучший для нас подарок – это Ваша денежная инвестиция в нашу молодую семью.</p>
-                        <p style="margin-top: 20px;">Праздник пройдет в теплой семейной атмосфере, без ведущих. Придуманные вами конкурсы и развлечения приветствуются.</p>
+                        <p>♥ Мы не будем оригинальными, но будем практичными. Лучший для нас подарок – это Ваша денежная инвестиция в нашу молодую семью.</p>
+			<img src="https://www.rabstol.net/uploads/gallery/main/91/rabstol_net_money_10.jpg" alt="Деньги" width="250" height="200" style="max-width: 100%; height: auto; margin-top: 20px;">
+
+                        <p style="margin-top: 20px;"> ♥Праздник пройдет в теплой семейной атмосфере, без ведущих. Придуманные вами конкурсы и развлечения приветствуются.</p>
+                    </div>
+                </div>
+            </div>
+<br>
+		<div class="info-grid">
+                <div class="info-card">
+                    <h3 class="info-title">Информация об усадьбе</h3>
+                    <div class="info-text">
+                        <p> ○ Мы будем париться в бане и купаться в купели, всем желающим необходимо взять с собой купальные принадлежности.</p>
+                        <p>○ В усадьбе есть парковочные места для 3 машин.</p>
+                        <p>○ В усадьбе есть караоке и проектор.</p>
+                        <p>○ Присутствует зона барбекю.</p>
+                        <p>○ В усадьбе есть достаточное количество спальных мест (около 20) - все желающие могут остаться на ночь.</p>
+			<img src="https://cdn.realt.by/img/47/6be75be0-fc95-11f0-8762-0242ac120002" alt="Хамам" width="250" height="200" style="max-width: 100%; height: auto; margin-top: 20px;">
+			<img src="https://cdn.realt.by/img/47/6bf505ba-fc95-11f0-ba03-0242ac120002" alt="Русская баня" width="250" height="200" style="max-width: 100%; height: auto; margin-top: 20px;">
+			<img src="https://storage.kvartiranasutki.by/cache/25048/NC0WVhBZwfbpxFkYF-jBJif_6axlvO9D.jpeg?w=600&fit=crop&fm=webp&s=732b1b4c6a8afcc764a23ce1096fd9fc" alt="Русская баня" width="250" height="200" style="max-width: 100%; height: auto; margin-top: 20px;">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Подробности по Усадьбе -->
-    <section class="info-section">
-        <div class="container">
-            <div class="info-grid">
-                <div class="info-card">
-                    <h3 class="info-title">Подробности</h3>
-                    <div class="info-text">
-                        <p>Мы будем париться в бане и купаться в купели, всем желающим необходимо взять с собой купальные принадлежности.</p>
-                        <p>В усадьбе есть парковочные места для 3 машин.</p>
-                        <p>В усадьбе есть караоке и проектор.</p>
-                        <p>Присутствует зона барбекю.</p>
-                        <p>В усадьбе есть достаточное количество спальных мест (около 20) - все желающие могут остаться на ночь.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  
 
     <!-- Форма подтверждения -->
     <section class="form-section">
