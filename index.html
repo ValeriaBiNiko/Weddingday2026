@@ -306,10 +306,16 @@ font-size: 1.1rem;
 
         /* Форма */
         .form-section {
-            padding: 100px 0;
+            padding: 50px 0;
             background-color: var(--color-cream);
         }
 
+	.iframe {
+  	  width: 100%;
+  	  max-width: 1300px;
+ 	  max-height: 50%;
+  	  border: none;
+	}
         .form-container {
             max-width: 700px;
             margin: 0 auto;
@@ -325,7 +331,7 @@ font-size: 1.1rem;
             text-align: center;
         }
 
-        .form-subtitle {
+       /* .form-subtitle {
             text-align: center;
             color: var(--color-gray);
             margin-bottom: 40px;
@@ -423,6 +429,7 @@ font-size: 1.1rem;
             margin-top: 20px;
             display: none;
         }
+*/
 
         /* Футер */
         footer {
@@ -452,6 +459,8 @@ font-size: 1.1rem;
             margin-top: 40px;
             color: var(--color-gold);
         }
+
+	
 
         /* Адаптивность */
         @media (max-width: 992px) {
@@ -739,7 +748,22 @@ font-size: 1.1rem;
   
 
     <!-- Форма подтверждения -->
-    <section class="form-section">
+
+	<section class="form-section">
+        	<div class="container">		
+		<iframe 					  	src="https://docs.google.com/forms/d/e/1FAIpQLSeJp51WOMsAqhTvdFzauzyVz44tLVgh2gErQetP3VlGnubQZA/viewform?embedded=true" 
+	width="640" 
+	height="1520" 
+	frameborder="0" 
+	marginheight="0" 
+	marginwidth="0">
+	Загрузка…
+		</iframe>
+    		</div>
+	<section>
+
+
+ <!--<section class="form-section">
         <div class="container">
             <div class="form-container">
                 <h3 class="form-title">Подтвердите, пожалуйста, анкету</h3>
@@ -823,7 +847,7 @@ font-size: 1.1rem;
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Футер -->
     <footer>
@@ -901,6 +925,8 @@ font-size: 1.1rem;
                     submitBtn.disabled = false;
                 }
             });
+
+
             
             // Анимация появления элементов при скролле
             const observerOptions = {
