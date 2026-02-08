@@ -37,10 +37,16 @@
         }
 
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+		display: flex;  /*Включаем flexbox */
+		justify-content: center;    /* Центрируем по горизонтали */
+        	gap: 20px;                   /* Расстояние между картинками */
+        	flex-wrap: wrap;             /* Перенос на новую строку при узком экране */
+               max-width: 90%;
+               margin: 0 auto;
+               padding: 0 20px;
         }
+	
+ 
 
         /* Главная-секция */
         .hero {
@@ -50,7 +56,7 @@
             justify-content: center;
             text-align: center;
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)),
-                        url('https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+                        url('https://i.ibb.co/HTJZJJGt/IMG-7456.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -179,7 +185,19 @@ font-size: 1.1rem;
         /* Таймлайн */
         .timeline-section {
             padding: 100px 0;
-            background-color: var(--color-cream);
+            /* background-color: var(--color-cream);*/
+ 	    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)),
+                        url('https://i.ibb.co/HfLB4h6d/IMG-7467.jpg');
+	min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            color: white;
+
+
         }
 
         .timeline {
@@ -544,11 +562,14 @@ font-size: 1.1rem;
             </div>
             
             <div class="image-gallery">
-				 <img src="https://avatars.dzeninfra.ru/get-zen_doc/1634555/pub_63a1c3b6621a4a155309bb74_63a1c3bf621a4a155309bed0/scale_1200" alt="Красивая картинка" width="400" height="400" style="max-width: 100%; height: auto; margin: 20px 0;">
-				 <img src="https://i.pinimg.com/474x/97/cb/af/97cbafcf10f766fe321303c27f1d1e68.jpg" alt="Красивая картинка" width="400" height="400" style="max-width: 100%; height: auto; margin: 20px 0;">
-				 <!-- <img src="images/design1.jpg" alt="Красивая картинка" width="400" height="600">
-                <img src="images/design3.jpg" alt="Красивая картинка" width="400" height="600">-->
-            </div>
+		 <img src="https://i.ibb.co/gMc1WMJC/IMG-7464.jpg" alt="Макс и Валерия" width="400" height="600" style="max-width: 100%; height: auto; margin: 20px 0;">
+	    </div>
+ 	    <div class="image-gallery">
+		 <img src="https://i.ibb.co/39wczKzp/IMG-7434.jpg" alt="Макс и Валерия" width="400" height="600" style="max-width: 100%; height: auto; margin: 20px 0;">
+	    </div>
+ 	    <div class="image-gallery">
+<img src="https://i.ibb.co/5pvNbF0/IMG-7475.jpg" alt="Макс и Валерия" width="400" height="600" style="max-width: 100%; height: auto; margin: 20px 0;">
+             </div>
         </div>
     </section>
 
